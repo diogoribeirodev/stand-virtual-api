@@ -23,7 +23,7 @@ export const getCars: RequestHandler = async (req, res, next) => {
         fuel: (req.query.fuel as string) || undefined,
         category: (req.query.category as string) || undefined,
         store_id: Number(req.query.store) || undefined,
-        new: req.query.new === "true" ? true : undefined,
+        new: req.query.new === "true" ? true : false,
       },
     });
     return res.status(200).json({
